@@ -1,0 +1,39 @@
+{
+  "name": "qa",
+  "version": "1.0.0",
+  "description": "imagedx testing",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "cy": "cypress",
+    "test": "cypress open",
+    "test:staging": "cypress open --config baseUrl=\"https://note-staging.revealbio.com\"",
+    "test:production": "cypress open --config baseUrl=\"https://note.revealbio.com\"",
+    "test:regress-old": "vue-cli-service test:e2e --config-file tests/regress/cypress.json",
+    "test:recordresults": "cypress run --config-file tests/regress/cypress.json --record --key ce88fdac-58dc-44b4-b34b-cb67675094e5",
+    "merge-reports": "jrm ./results/reports/combined.xml \"./results/*.xml\"",
+    "delete-reports": "rm ./results/*.xml || true",
+    "generate-report": "marge results/reports/combined.xml --reportDir mochawesome --assetsDir mochaweome/assets --reportPageTitle index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli-service": "^4.5.15",
+    "cypress-file-upload": "^5.0.8",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.1",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@cypress/vue": "^2.2.3",
+    "@percy/cli": "^1.0.0-beta.73",
+    "@percy/cypress": "^3.1.1",
+    "@vue/cli-plugin-e2e-cypress": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^9.5.2",
+    "cypress-axe": "^0.14.0",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
