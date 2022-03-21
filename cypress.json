@@ -1,0 +1,30 @@
+{
+    "fixturesFolder": "fixtures",
+    "integrationFolder": "cypress/integration",
+    "screenshotsFolder": "cypress/screenshots",
+    "videosFolder": "cypress/videos",
+    "supportFile": "cypress/support/index.js",
+    "testFiles": "**/*.test.js",
+    "experimentalStudio": true,
+    "experimentalSessionSupport" : true,
+    "projectId": "cb2ik2",
+    "viewportWidth": 1280,
+    "viewportHeight": 1024,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile":"results/test-output-[hash].xml",
+      "toConsole": true
+    },
+    "trashAssetsBeforeRuns": true,
+    "env": {
+      "stagingSiteUrl": "https://note-staging.revealbio.com",
+      "productionSiteUrl": "https://note.revealbio.com",
+      "stagingCytomine": "https://dev-core3.revealbio.com",
+      "productionCytomine": "https://rv-core.revealbio.com",
+      "testUser": "qa_user1",
+      "testPassword": "QApass01",
+      "testAdminUser": "qa_admin",
+      "testAdminPassword": "QApassa1"
+    }
+  }
+  
